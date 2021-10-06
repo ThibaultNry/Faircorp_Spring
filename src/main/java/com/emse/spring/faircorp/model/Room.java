@@ -32,7 +32,7 @@ public class Room {
     public Room() {
     }
 
-    public Room(String name, int floor, double currentTemperature, double targetTemperature) {
+    public Room(String name, int floor, Double currentTemperature, Double targetTemperature) {
         this.name = name;
         this.floor = floor;
         this.currentTemperature = currentTemperature;
