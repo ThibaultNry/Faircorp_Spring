@@ -7,13 +7,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 class FaircorpApplicationConfig {
-    // (2)
     @Bean
     public CommandLineRunner greetingCommandLine(GreetingService greetingService) { // (3)
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
-                // (4)
                 greetingService.greet("Spring");
             }
         };

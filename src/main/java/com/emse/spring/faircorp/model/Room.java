@@ -3,14 +3,13 @@ package com.emse.spring.faircorp.model;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity// (1)
-@Table(name = "ROOM")// (2)
+@Entity
+@Table(name = "ROOM")
 public class Room {
-    @Id// (3)
+    @Id
     @GeneratedValue
     private Long id;
 
-    // (4)
     @Column(nullable=false)
     private String name;
 
