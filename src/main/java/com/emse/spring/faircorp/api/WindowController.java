@@ -1,11 +1,12 @@
 package com.emse.spring.faircorp.api;
-import com.emse.spring.faircorp.api.WindowDto;
+
 import com.emse.spring.faircorp.dao.RoomDao;
 import com.emse.spring.faircorp.dao.WindowDao;
 import com.emse.spring.faircorp.model.Room;
 import com.emse.spring.faircorp.model.Window;
 import com.emse.spring.faircorp.model.WindowStatus;
 import org.springframework.web.bind.annotation.*;
+
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -43,8 +44,7 @@ public class WindowController {
         Window window = null;
         if (dto.getId() == null) {
             window = windowDao.save(new Window(dto.getName(), dto.getWindowStatus(), room));
-        }
-        else {
+        } else {
             window = windowDao.getById(dto.getId());
             window.setWindowStatus(dto.getWindowStatus());
         }
@@ -55,7 +55,7 @@ public class WindowController {
     @PutMapping(path = "/{id}/switch")
     public WindowDto switchStatus(@PathVariable Long id) {
         Window window = windowDao.findById(id).orElseThrow(IllegalArgumentException::new);
-        window.setWindowStatus(window.getWindowStatus() == WindowStatus.OPEN ? WindowStatus.CLOSED: WindowStatus.OPEN);
+        window.setWindowStatus(window.getWindowStatus() == WindowStatus.OPEN ? WindowStatus.CLOSED : WindowStatus.OPEN);
         return new WindowDto(window);
     }
 
