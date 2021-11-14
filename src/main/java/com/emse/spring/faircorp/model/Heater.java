@@ -1,5 +1,4 @@
 package com.emse.spring.faircorp.model;
-
 import javax.persistence.*;
 
 @Entity
@@ -13,7 +12,7 @@ public class Heater {
     private String name;
 
     @Column(nullable=true)
-    private String power;
+    private Long power;
 
     @ManyToOne
     private Room room;
@@ -24,8 +23,8 @@ public class Heater {
     public Heater() {
     }
 
-    public Heater(String name, HeaterStatus status, String power, Room room) {
-        this.heaterStatus = status;
+    public Heater(String name, HeaterStatus heaterStatus, Long power, Room room) {
+        this.heaterStatus = heaterStatus;
         this.name = name;
         this.power = power;
         this.room = room;
@@ -51,17 +50,18 @@ public class Heater {
         return room;
     }
 
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Long getPower() {
+        return power;
+    }
+
     public void setPower(String name) {
         this.power = power;
     }
 
-    public String getPower() {
-        return power;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
     public HeaterStatus getHeaterStatus() {
         return heaterStatus;
     }

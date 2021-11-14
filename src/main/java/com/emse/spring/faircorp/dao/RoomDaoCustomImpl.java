@@ -17,4 +17,13 @@ public class RoomDaoCustomImpl implements RoomDaoCustom {
                 .setParameter("current", temp)
                 .getSingleResult();
     }
+
+    @Override
+    public Room findRoomByName(String name) {
+        String jpql = "select r from Room r where r.name=:name";
+        return em.createQuery(jpql, Room.class)
+                .setParameter("name", name)
+                .getSingleResult();
+    }
+
 }

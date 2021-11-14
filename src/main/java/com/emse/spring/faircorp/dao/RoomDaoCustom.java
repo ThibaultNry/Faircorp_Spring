@@ -4,4 +4,5 @@ import java.util.List;
 
 public interface RoomDaoCustom {
     Room findTemp(Long id, Double temp);
+    Room findRoomByName(String name);
 }

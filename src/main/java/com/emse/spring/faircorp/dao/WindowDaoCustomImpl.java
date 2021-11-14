@@ -3,8 +3,12 @@ package com.emse.spring.faircorp.dao;
 import com.emse.spring.faircorp.dao.WindowDaoCustom;
 import com.emse.spring.faircorp.model.Window;
 import com.emse.spring.faircorp.model.WindowStatus;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.List;
 
 public class WindowDaoCustomImpl implements WindowDaoCustom {
@@ -20,4 +24,5 @@ public class WindowDaoCustomImpl implements WindowDaoCustom {
                 .setParameter("status", WindowStatus.OPEN)
                 .getResultList();
     }
+
 }
