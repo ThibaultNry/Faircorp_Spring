@@ -1,8 +1,10 @@
 package com.emse.spring.faircorp.api;
+
 import com.emse.spring.faircorp.dao.BuildingDao;
 import com.emse.spring.faircorp.dao.RoomDao;
 import com.emse.spring.faircorp.model.*;
 import org.springframework.web.bind.annotation.*;
+
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,5 @@
 package com.emse.spring.faircorp.dao;
+
 import com.emse.spring.faircorp.model.Heater;
 import com.emse.spring.faircorp.model.Window;
 import org.assertj.core.api.Assertions;
@@ -25,7 +26,7 @@ public class BuildingDaoTest {
 
     @Test
     public void shouldFindAllHeaters() {
-        List <Heater> heaters = buildingDao.findHeaterBuilding(1L);
+        List<Heater> heaters = buildingDao.findHeaterBuilding(1L);
         Assertions.assertThat(heaters.size()).isEqualTo(2);
     }
 

@@ -1,4 +1,5 @@
 package com.emse.spring.faircorp.model;
+
 import javax.persistence.*;
 import java.util.List;
 

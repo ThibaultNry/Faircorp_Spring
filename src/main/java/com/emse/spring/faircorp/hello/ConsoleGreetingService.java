@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 @Primary
 public class ConsoleGreetingService implements GreetingService {
     public void greet(String name) {
-        System.out.println("Hello, "+ name +"!");
+        System.out.println("Hello, " + name + "!");
     }
 }

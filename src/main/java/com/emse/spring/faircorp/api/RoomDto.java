@@ -1,5 +1,7 @@
 package com.emse.spring.faircorp.api;
+
 import java.util.List;
+
 import com.emse.spring.faircorp.model.Room;
 
 public class RoomDto {

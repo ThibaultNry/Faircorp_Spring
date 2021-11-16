@@ -16,7 +16,8 @@ class DummyUserServiceTest {
 
     @Configuration
     @ComponentScan("com.emse.spring.faircorp.hello")
-    public static class DummyUserServiceTestConfig{}
+    public static class DummyUserServiceTestConfig {
+    }
 
     @Autowired
     public DummyUserService dummyUserService;

@@ -1,4 +1,5 @@
 package com.emse.spring.faircorp.model;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,10 +9,10 @@ public class Heater {
     @GeneratedValue
     private Long id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String name;
 
-    @Column(nullable=true)
+    @Column(nullable = true)
     private Long power;
 
     @ManyToOne

@@ -9,7 +9,7 @@ public class Window {
     @GeneratedValue
     private Long id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String name;
 
     @Enumerated(EnumType.STRING)

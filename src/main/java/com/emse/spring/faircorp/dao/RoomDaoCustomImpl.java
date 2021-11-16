@@ -1,5 +1,7 @@
 package com.emse.spring.faircorp.dao;
+
 import com.emse.spring.faircorp.model.Room;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;

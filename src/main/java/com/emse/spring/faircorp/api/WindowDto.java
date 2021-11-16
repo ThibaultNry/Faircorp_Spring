@@ -1,4 +1,5 @@
 package com.emse.spring.faircorp.api;
+
 import com.emse.spring.faircorp.model.Window;
 import com.emse.spring.faircorp.model.WindowStatus;
 
