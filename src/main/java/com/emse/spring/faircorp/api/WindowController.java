@@ -60,7 +60,7 @@ public class WindowController {
     }
 
     //Delete a window
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "/{id}/delete")
     public void delete(@PathVariable Long id) {
         windowDao.deleteById(id);
     }
